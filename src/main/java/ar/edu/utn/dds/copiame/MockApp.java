@@ -15,5 +15,12 @@ public class MockApp {
             ViandaDTO vianda = new ViandaDTO(qr, LocalDateTime.now(), EstadoViandaEnum.PREPARADA, 1L, 1);
             ctx.json(vianda);
         });
+
+        mockApp.patch("/viandas/{qr}", ctx ->{
+            String qr = ctx.pathParam("qr");
+            ViandaDTO vianda = new ViandaDTO(qr, LocalDateTime.now(), EstadoViandaEnum.RETIRADA, 1L,1);
+            ctx.json(vianda);
+                }
+                );
         }
 }
