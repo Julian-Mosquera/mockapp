@@ -13,6 +13,6 @@ RUN mvn clean package assembly:single -DskipTests
 
 FROM openjdk:17-jdk-slim
 COPY --from=build /target/TPDDSApp.jar mockapp.jar
-# ENV PORT=8080
-EXPOSE 8080
+# ENV PORT=8081
+EXPOSE 8081
 CMD ["java","-classpath","mockapp.jar","ar.edu.utn.dds.copiame.MockApp"]

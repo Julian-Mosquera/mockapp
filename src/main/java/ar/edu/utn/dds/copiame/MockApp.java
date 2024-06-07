@@ -7,7 +7,7 @@ import io.javalin.Javalin;
 import java.time.LocalDateTime;
 
 public class MockApp {
-    public static void mockServer(){
+    public static void main(String[] args){
         Javalin mockApp = Javalin.create().start(8081);
 
         mockApp.get("/viandas/{qr}", ctx -> {
