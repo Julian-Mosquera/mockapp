@@ -15,4 +15,4 @@ FROM openjdk:17-jdk-slim
 COPY --from=build /target/TPDDSApp.jar webapp.jar
 # ENV PORT=8080
 EXPOSE 8080
-CMD ["java","-classpath","mockapp.jar","ar.edu.utn.dds.copiame.MockApp.java"]
+CMD ["java","-classpath","mockapp.jar","ar.edu.utn.dds.copiame.MockApp"]
